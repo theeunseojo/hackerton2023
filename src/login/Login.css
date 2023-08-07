@@ -1,54 +1,90 @@
+@font-face {
+  font-family: 'TTTtangsbudaejjigaeB';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/TTTtangsbudaejjigaeB.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face{
+  font-family:'bitbit';
+  src:url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff'),url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2') ;
+}
+
+@font-face {
+  font-family: 'KimjungchulGothic-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulGothic-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-  }
-  
-  h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    width: 300px;
-  }
-  
-  label {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #0d0d0d;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  button:hover {
-    background-color: #c9d7e6;
-  }
-  
+align-items: center;
+justify-content: center;
+height: 100vh;
+background-color: white;
+margin-top: 100px;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 200;
+  font-family:'bitbit';
+  margin-bottom: 30px;
+}
+
+form {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 10px;
+background-color: rgb(220, 208, 193);
+border: none;
+padding: 20px;
+border-radius: 30px;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+width: 300px;
+}
+
+label {
+font-size: 16px;
+font-weight: bold;
+font-family: 'TTTtangsbudaejjigaeB';
+}
+
+input[type="email"] {
+  padding: 10px;
+  border: 1px solid black; 
+  border-radius: 20px;
+  width: 100%;
+  font-family: 'KimjungchulGothic-Bold';
+
+}
+input[type="password"] {
+  padding: 9px;
+  border: 1px solid black; 
+  border-radius: 20px;
+  width: 100%;
+  font-family: 'KimjungchulGothic-Bold';
+
+}
+
+
+button {
+padding: 10px 20px;
+margin-top: 10px;
+background-color: black;
+color: #fff;
+border: none;
+border-radius: 20px;
+cursor: pointer;
+transition: background-color 0.2s;
+font-family: 'bitbit';
+}
+p{
+    font-size : 13px;
+    margin-top: 10px;
+}
+
+
+button:hover {
+background-color:  rgb(200, 78, 17);
+}

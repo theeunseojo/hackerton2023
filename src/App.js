@@ -1,15 +1,17 @@
-import React from 'react';
-import { BrowserRouter,Routes,Route} from 'react-router-dom';
+import React from 'react'; 
+import {Routes,Route} from 'react-router-dom';
 import Login from './login/Login';
+import Sign from './sign/sign';
 
 function App() { 
     return(
-       <BrowserRouter>
+        <div className="App">
             <Routes>
-            <Route path="/" element={<Login />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Sign />} />
             </Routes>
-       </BrowserRouter>
-    );
+        </div>
+);
 }
 
 export default App;
