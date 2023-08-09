@@ -1,0 +1,116 @@
+.simple-page {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+.logo {
+    max-width: 150px;
+    height: auto;
+  }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+.category-menu {
+    display: flex;
+    gap: 10px;
+  }
+  
+.category-button {
+    background-color: #f2f2f2;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+.category-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+.category-button.active {
+    background-color: #4285f4;
+    color: white;
+  }
+  
+
+.content {
+    width: 100%;
+  }
+  
+
+.accordion {
+    border: 1px solid rgb(221, 221, 221);
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  
+.accordion-header {
+    background-color: rgb(242, 242, 242);
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .accordion-header:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .accordion-content {
+    padding: 10px;
+    display: none;
+  }
+  
+  .accordion.active .accordion-content {
+    display: block;
+  }
+  
+  .page-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .back-button,
+  .ask-button {
+    background-color: rgb(66, 133, 244);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover,
+  .ask-button:hover {
+    background-color: skyblue;
+  }
+  
+  /* 서비스 정보와 자주 묻는 질문 스타일 */
+  .faq-section {
+    padding: 20px;
+    border: 1px solid rgb(221, 221, 221);
+    margin-top: 20px;
+    background-color: rgb(249, 249, 249);
+  }
+  
+  .faq-section h2 {
+    margin-top: 0;
+  }
+  
+  .faq-section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  
