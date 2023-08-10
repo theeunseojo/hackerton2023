@@ -1,29 +1,40 @@
 import React, { useState } from 'react';
-import './SimplePage.css'; 
+import smile from './smile.svg';
+import './SimplePage.css';
+
+const faqData = [
+  {
+    question: '서비스명은 무엇인가요?',
+    answer: '공공서비스1은 사용자들에게 다양한 정보를 제공하는 서비스입니다.',
+  },
+  {
+    question: '서비스를 이용하는 방법은 어떻게 되나요?',
+    answer: '서비스를 이용하려면 홈페이지에 접속하여 회원 가입 후 로그인하세요.',
+  },
+];
 
 function SimplePage() {
   const categories = ['초간단질문', '플러스질문', '수행미션'];
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+  const isSimpleQuestionCategory = selectedCategory === '초간단질문';
+  const [accordion, setActiveAccordion] = useState(-1);
+
+  function toggleAccordion(index) {
+    if (index === accordion) {
+      setActiveAccordion(-1);
+    } else {
+      setActiveAccordion(index);
+    }
+  }
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
   };
 
-  const faqData = [
-    {
-      question: '서비스명은 무엇인가요?',
-      answer: '공공서비스1은 사용자들에게 다양한 정보를 제공하는 서비스입니다.',
-    },
-    {
-      question: '서비스를 이용하는 방법은 어떻게 되나요?',
-      answer: '서비스를 이용하려면 홈페이지에 접속하여 회원 가입 후 로그인하세요.',
-    },
-  ];
-
   return (
     <div className="simple-page">
-      <header className="header">
-        <img src="logo.png" alt="로고" className="logo" />
+      <header className="simplepage-header">
+        <img src={smile} alt="로고" className="logo" />
         <div className="category-menu">
           {categories.map((category) => (
             <button
@@ -37,7 +48,7 @@ function SimplePage() {
         </div>
       </header>
       <main className="content">
-        {selectedCategory === '초간단질문' && (
+        {isSimpleQuestionCategory && (
           <div className="faq-section">
             <h2>서비스 명</h2>
             <p>공공서비스1</p>
@@ -46,21 +57,21 @@ function SimplePage() {
             <p>공공서비스1은 사용자들에게 다양한 정보를 제공하는 서비스입니다.</p>
 
             <h2>자주 묻는 질문</h2>
-            {faqData.map((faq, index) => (
-              <div className="accordion" key={index}>
-                <div className="accordion-header">{faq.question}</div>
-                <div className="accordion-content">{faq.answer}</div>
-              </div>
-            ))}
+            <div className="accordion_faq">
+              {faqData.map((faq, index) => (
+                <div key={index} onClick={() => toggleAccordion(index)}>
+                  <div className="accordion-header">
+                    <h3 className={accordion === index ? 'active' : ''}>{faq.question}</h3>
+                  </div>
+                  <div className={`accordion-content ${accordion === index ? 'active' : ''}`}>
+                    <p>{faq.answer}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         )}
-
-        {/* 다른 카테고리에 대한 내용을 추가하세요 */}
       </main>
-      <div className="page-buttons">
-        <button className="back-button">뒤로가기</button>
-        <button className="ask-button">질문하기</button>
-      </div>
     </div>
   );
 }
