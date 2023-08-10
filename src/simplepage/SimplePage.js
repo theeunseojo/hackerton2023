@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState ,useNavigate } from 'react';
 import smile from './smile.svg';
 import './SimplePage.css';
 
@@ -14,10 +14,15 @@ const faqData = [
 ];
 
 function SimplePage() {
+  // 카테고리 
   const categories = ['초간단질문', '플러스질문', '수행미션'];
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+  // 버튼들 보이게 하려고 
   const isSimpleQuestionCategory = selectedCategory === '초간단질문';
+  // 아코디언 
   const [accordion, setActiveAccordion] = useState(-1);
+
+
 
   function toggleAccordion(index) {
     if (index === accordion) {
@@ -72,6 +77,12 @@ function SimplePage() {
           </div>
         )}
       </main>
+      {isSimpleQuestionCategory && (
+        <div className="page-buttons">
+          <button className="back-button" >뒤로가기</button>
+          <button className="ask-button">질문하기</button>
+        </div>
+      )}
     </div>
   );
 }
