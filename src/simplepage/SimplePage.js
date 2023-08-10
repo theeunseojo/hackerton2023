@@ -1,4 +1,5 @@
-import React, { useState ,useNavigate } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import smile from './smile.svg';
 import './SimplePage.css';
 
@@ -21,6 +22,10 @@ function SimplePage() {
   const isSimpleQuestionCategory = selectedCategory === '초간단질문';
   // 아코디언 
   const [accordion, setActiveAccordion] = useState(-1);
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate(-1);
+  };
 
 
 
@@ -79,7 +84,7 @@ function SimplePage() {
       </main>
       {isSimpleQuestionCategory && (
         <div className="page-buttons">
-          <button className="back-button" >뒤로가기</button>
+          <button className="back-button " onClick={goBack} >뒤로가기</button>
           <button className="ask-button">질문하기</button>
         </div>
       )}
