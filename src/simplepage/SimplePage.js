@@ -29,6 +29,8 @@ function SimplePage() {
 
 
 
+
+
   function toggleAccordion(index) {
     if (index === accordion) {
       setActiveAccordion(-1);
@@ -39,6 +41,11 @@ function SimplePage() {
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
+    if (category === '플러스질문') {
+      navigate('/pluspage'); // 플러스질문 페이지로 이동
+    } else if (category === '수행미션') {
+      navigate('/missonpage'); // 미션수행 페이지로 이동
+    }
   };
 
   return (
@@ -85,7 +92,6 @@ function SimplePage() {
       {isSimpleQuestionCategory && (
         <div className="page-buttons">
           <button className="back-button " onClick={goBack} >뒤로가기</button>
-          <button className="ask-button">질문하기</button>
         </div>
       )}
     </div>

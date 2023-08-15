@@ -9,15 +9,17 @@ import MissionCard from './MissionCard';
 function MissionPage() {
 
   const missions = [
-    { date: '2023-08-10', name: 'Mission A', status: 'success' },
-    { date: '2023-08-11', name: 'Mission B', status: 'failure' },
+    { date: '2023-08-10', name: '김XX', status: 'success' },
+    { date: '2023-08-11', name: '이XX', status: 'failure' },
+    { date: '2023-08-11', name: '박XX', status: 'failure' },
+    { date: '2023-08-11', name: '조XX', status: 'success' }
   ];
   return (
     <div className="mission-page">
       <Logo />
       <BackButton />
-      <Participants />
       <MissionStatus />
+      <Participants />
       <div className="mission-cards">
         {missions.map((mission, index) => (
           <MissionCard

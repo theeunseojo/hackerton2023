@@ -24,7 +24,7 @@
 
 
 .page {
-    margin-top: 15vh;
+    margin-top: 12vh;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
@@ -38,10 +38,14 @@
 }
 
 .contentWrap {
-    margin-top: 26px;
+    width: 50vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vh;
     flex: 1;
-    background-color: rgb(220, 208, 193);
-    padding: 58px;
+    background-color: #FDE0D6;
+    padding: 30px;
     border-radius: 30px;
 }
 
@@ -63,7 +67,7 @@
 }
 
 .inputWrap:focus-within {
-    border: 2px solid green;
+    border: 2px solid rgb(200, 78, 17);
 }
 input {
     width: 100%;
@@ -101,7 +105,7 @@ input::placeholder {
 }
 
 .bottomButton:hover{
-    background-color: rgb(200, 78, 17);
+    background-color:  #cf6947;
 }
 
 .goButton {
@@ -121,28 +125,36 @@ input::placeholder {
 
 .HomeBtn {
     width: 15vw;
-    height: 3vh;
+    height: 5vh;
     font-size: 15px;
     font-weight: 100;
     border-color: rgb(227, 205, 178);
     border-radius: 20px;
-    margin-top: 3vh;
+    margin-top: 2.4vh;
     background-color: black;
+    color: white;
     font-family:'bitbit';
-    padding: 1%;
+    padding: 10px;
     cursor: pointer;
 
 }
+.inputbox2{
+    background-color: white;
+}
+
+.inputbox{
+    background-color: #fde0d6;
+  }
 
 .signinBtn{
     margin-top: 2vh;
     font-size: 15px;
-    color: green;
+    background-color:  #cf6947;
     cursor: pointer;
     font-family: 'KimjungchulGothic-Bold';
 
 }
 
 .signinBtn:hover {
-    color: black
+    background-color:  #cf6947;
 }
