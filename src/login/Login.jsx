@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import {Link} from 'react-router-dom';
+import axios from 'axios'; // eslint-disable-next-line
+import { Link,Navigate, useNavigate } from "react-router-dom";
 import './Login.css';
-import { Navigate, useNavigate } from "react-router-dom";
+
 
 function Login () {
   const navigate = useNavigate();
@@ -45,7 +45,7 @@ function Login () {
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
         <button className='login' type="button" onClick={handleLogin}>로그인</button>
-        <p className='inputbox'>회원가입 시 더 많은 혜택이 있어요 <Link className='inputbox' to = "/signup">회원가입</Link></p>
+        <p className='signup-link'>회원가입 시 더 많은 혜택이 있어요 <Link to = "/signup">회원가입</Link></p>
       </form>
       <div>
       <button className='nologin' onClick={goMain}>로그인 없이 입장</button>

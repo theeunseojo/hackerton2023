@@ -1,5 +1,8 @@
-*{
-    background-color: antiquewhite;
+:root {
+    --main-color: rgb(218, 144, 144);
+    --secondary-color: rgb(255, 209, 209);
+    --success-color: #4caf50;
+    --failure-color: #f44336;
 }
 .mission-page {
     display: flex;
@@ -9,11 +12,11 @@
 }
 .logo{
     position: absolute;
-    top: 20px;
-    left: 20px;
     font-size: 50px;
     font-weight: bold;
-    color: rgb(218, 144, 144); 
+    width: 30vh;
+    margin-top: 20vh;
+    color: var(--main-color);
 }
 .back-button{
     position: fixed;
@@ -30,16 +33,13 @@
     top: 150px; 
     bottom: 450px;
     left: 20px;
-    background-color:rgb(218, 144, 144);
+    background-color:var(--secondary-color);
     padding: 10px;
     border-radius: 10px;
     color: white;
     
 }
-.participants-name{
-    background-color:rgb(218, 144, 144);
-}
-  
+
 .mission-status {
     text-align: center;
     margin: 20px 0;
@@ -59,6 +59,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(200px, auto); 
     border: black solid 1px;
+    background-color: var(--secondary-color);
     gap: 20px;
 }
   
@@ -99,10 +100,10 @@
  }
   
   .success-indicator {
-    background-color: #4caf50;
+    background-color: var(--success-color);
   }
   
   .failure-indicator {
-    background-color: #f44336;
+    background-color: var(--failure-color);
   }
   

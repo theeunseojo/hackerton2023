@@ -7,8 +7,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: rgb(182, 165, 178);
-  color: white;
+  background-color: rgb(255, 227, 225);
+  color: rgb(255, 148, 148);
 }
 
 .logo {
@@ -33,10 +33,10 @@
 
 .content {
   padding: 20px;
+  background-color: rgb(255, 227, 225);
 }
 
 .faq-section {
-  background-color: rgb(234, 234, 234);
   padding: 20px;
   border-radius: 10px;
 }
@@ -44,17 +44,22 @@
 
 .accordion-header {
   padding: 10px;
-  background-color: rgb(121, 70, 70);
+  border: 1px solid pink;
+  border-radius: 5px;
   font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
-
-
 .accordion-content {
   padding: 10px;
   display: none;
 }
 
 .accordion-content.active {
+  background-color:  rgb(255, 227, 225);
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
   display: block;
 }
 
@@ -64,11 +69,10 @@
   margin-top: 20px;
 }
 
-.back-button,
-.ask-button {
+.back-button{
   padding: 10px 20px;
   font-size: 16px;
-  background-color: rgb(51, 99, 255);
+  background-color: rgb(255, 148, 148);
   color: white;
   border: none;
   border-radius: 5px;
