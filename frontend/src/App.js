@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'; 
-import { Routes, Route, useLocation, BrowserRouter, Switch} from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Login from './login/Login';
 import Sign from './sign/sign';
 import Home from './mainpage/Home';
@@ -13,7 +13,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { authUser } from './store/thunkFunctions';
 import ProtectedRoutes from './authroutes/ProtectedRoutes';
 import NotAuthRoutes from './authroutes/NotAuthRoutes';
-import Fav from './FavPage/Fav';
+import Mypage from './mypage/Mypage';
 
 function App() {
 
@@ -43,12 +43,14 @@ function App() {
         <Route path ="/pluspage" element = { <Pluspage/>} />    
         <Route path ="/simplepage" element = { <SimplePage/>} />
         <Route path ="/intro" element = { <Intro/>} />
-        <Route path = "/FavPage" element={<Fav/>}/>
+        <Route path ="/mypage" element={<Mypage/>}/>
+        <Route path ="/missonpage" element={<MissionPage/>}/>
+
 
 {/* 이 Route들의 경우, 로그인 된 사람들만 이쪽으로 보내 */}
         <Route element={<ProtectedRoutes isAuth={isAuth}/>}>
-          <Route path ="/missonpage" element={<MissionPage/>}/>
-         
+          
+          
         </Route>
 
 {/* 이 Route들의 경우, 로그인 안된 사람들만 이쪽으로 보내 */}

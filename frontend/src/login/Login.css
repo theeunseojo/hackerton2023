@@ -59,9 +59,8 @@ h1 {
   padding: 10px;
   border-radius: 30px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  width: 45vh;
+  width: 39vh;
   height: 30vh;
-  margin-bottom: 3px;
 }
 
 .login_inputbox{
@@ -120,14 +119,9 @@ p {
   font-size : 13px;
   margin-top: 10px;
 }
+
 button:hover {
   background-color:  #cf6947;
 }
 
 /* signup-link css 내용이 없습니다!! */
-.signup-link{
-  margin-top: 5px;
-}
-.login_inputbox{
-  background-color: transparent;
-}

@@ -5,10 +5,27 @@ import Styles from "./nav/nav.css";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Homediv_health from "./homediv/Homediv_health";
+import Homediv_edu from './homediv/Homediv_edu';
+import Homediv_house from "./homediv/Homediv_house";
+import Homediv_help from "./homediv/Homediv_help";
 
 function Home() {
-    const [homediv, setHomediv] = useState(0);
-    const navigate = useNavigate(true);
+    const [isShow, setIsshow] = useState(0);
+    const trafShow = () => {
+        setIsshow(0);
+    }
+    const medShow = () => {
+        setIsshow(1);
+    }
+    const eduShow = () => {
+        setIsshow(2);
+    }
+    const houseShow = () => {
+        setIsshow(3);
+    }
+    const taxShow = () => {
+        setIsshow(4);
+    }
     return(
         <div >
             <div className="sidebar">
@@ -26,19 +43,19 @@ function Home() {
                     <div className="nav_bar">
                         <ul className="nav_ul">
                             <li>
-                                <a className="nav_a" onClick={()=> setHomediv(true)} >교통</a>
+                                <a className="nav_a" onClick={trafShow} >교통</a>
                             </li>
                             <li>
-                                <a className="nav_a" onClick={()=> setHomediv(false)}>의료</a>
+                                <a className="nav_a" onClick={medShow}>의료</a>
                             </li>
                             <li>
-                                <a className="nav_a" href="#">교육</a>
+                                <a className="nav_a" onClick={eduShow}>교육</a>
                             </li>
                             <li>
-                                <a className="nav_a" href="#">주택</a>
+                                <a className="nav_a" onClick={houseShow}>금융</a>
                             </li>
                             <li>
-                                <a className="nav_a" href="#" >세금</a>
+                                <a className="nav_a" onClick={taxShow} >복지</a>
                             </li>
                         </ul>
 
@@ -48,7 +65,11 @@ function Home() {
             </div>
 
         </div>
-            {homediv ? <Homediv/> : <Homediv_health/>}
+            {isShow === 0 ? <Homediv/> : null}
+            {isShow === 1 ? <Homediv_health/> : null}
+            {isShow === 2 ? <Homediv_edu/> : null}
+            {isShow === 3 ? <Homediv_house/> : null}
+            {isShow === 4 ? <Homediv_help/> : null}
                 
 
             </div>

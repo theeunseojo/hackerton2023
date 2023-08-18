@@ -7,7 +7,7 @@ function Introcard({name, role, jpg}){
    
             
             <div className="members">
-                <div className="container">
+                <div className="mem_container">
                     <div className="intro_card">
                     <h2 className="memname">{name}</h2>
                     <div className="title title--epic">{role}</div>

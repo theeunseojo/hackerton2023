@@ -41,7 +41,7 @@
     font-size: 30px;
   }
 .introdiv{
-    margin-top: 10vh;
+    margin-top: 15vh;
     display: flex;
     flex-direction: column;
 
@@ -111,6 +111,9 @@ margin-left: 2vw;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
 }
 
+.mem_container{
+  margin-top: 10vh;
+}
 .team {
   margin-top: 1rem;
   color: #484848;
@@ -124,10 +127,9 @@ margin-left: 2vw;
 }
 
 .introdiv{
-  
     display: felx;
     flex-direction: row;
-    margin-top: 15vh;
+    margin-top: -5vh;
 }
 
 .memname{

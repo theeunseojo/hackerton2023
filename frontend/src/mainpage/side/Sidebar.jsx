@@ -23,8 +23,9 @@ function Sidebar() {
     const goPlus = () =>{
         navigate("/pluspage");
     }
-    const goFav = () =>{
-        navigate("/Fav");
+
+    const goMypage = () =>{
+        navigate("/mypage");
     }
     return(
         <nav class="menu" tabindex="0">
@@ -37,8 +38,8 @@ function Sidebar() {
                 <li tabindex="0" class="icon-all"><span className="text_color" onClick={goMain}>전체</span></li>
                 <li tabindex="0" class="icon-alert"><span className="text_color">알림</span></li>
                 <li tabindex="0" class="icon-chat"><span className="text_color" onClick={goPlus}>채팅</span></li>
-                <li tabindex="0" class="icon-mypage"><span className="text_color">마이페이지</span></li>
-                <li tabindex="0" class="icon-star"><span className="text_color" onClick={goFav}>즐겨찾기</span></li>
+                <li tabindex="0" class="icon-mypage"><span className="text_color" onClick={goMypage}>마이페이지</span></li>
+                <li tabindex="0" class="icon-star"><span className="text_color">즐겨찾기</span></li>
                 
                 <li tabindex="0" class="icon-info"><span className="text_color" onClick={goIntro}>사이트 정보</span></li>
                 <li tabindex="0" class="icon-out"><span className="text_color" onClick={handleLogout}>로그아웃</span></li>

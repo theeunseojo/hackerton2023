@@ -24,10 +24,10 @@
 
 
 .page {
-    margin-top: 12vh;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
+    margin-left: 24vw;
     
 }
 
@@ -35,15 +35,16 @@
     font-size: 50px;
     font-weight: 200;
     font-family:'bitbit';
+    margin-left: -20vw;
+    margin-top: 5vh;
 }
-/*marign-left 수정함.*/
+
 .contentWrap {
     width: 50vw;
     height: 70vh;
     display: flex;
     flex-direction: column;
     margin-top: 3vh;
-    margin-left :50vh;
     flex: 1;
     background-color: #FDE0D6;
     padding: 30px;
@@ -56,16 +57,16 @@
     font-weight: 300;
     margin-top: 1vh;
 }
-/*margin-left 수정함함*/
+
 .inputWrap {
     width: 24vw;
     display: flex;
     border-radius: 30px;
     padding: 8px;
     margin-top: 1vh;
-    margin-left: 28vh;
     background-color: white;
     border: 2px solid grey;
+    margin-left: 12vw;
 }
 
 .inputWrap:focus-within {
@@ -117,7 +118,7 @@ input::placeholder {
     padding: 1%;
     cursor: pointer;
 } */
-/*magin-left 수정함 */
+
 .HomeBtn {
     width: 15vw;
     height: 5vh;
@@ -126,7 +127,7 @@ input::placeholder {
     border-color: rgb(227, 205, 178);
     border-radius: 20px;
     margin-top: 2.4vh;
-    margin-left :90vh;  
+    margin-left: 19vw;
     background-color: black;
     color: white;
     font-family:'bitbit';

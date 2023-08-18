@@ -9,17 +9,17 @@ import MissionCard from './MissionCard';
 function MissionPage() {
 
   const missions = [
-    { date: '2023-08-10', name: '김XX', status: 'success' },
-    { date: '2023-08-11', name: '이XX', status: 'failure' },
-    { date: '2023-08-11', name: '박XX', status: 'failure' },
-    { date: '2023-08-11', name: '조XX', status: 'success' }
+    { date: '유효기한 | 무기한', name: '학과시험 등록 인증', status: 'success' },
+    { date: '유효기한 | 무기한', name: '필기시험 80점이상 인증', status: 'failure' },
+    { date: '유효기한 | 2023-12-31', name: '모바일 운전면허증 발급 인증', status: 'failure' },
+    { date: '유효기한 | 2023-12-31', name: '교통안전교육 이수 인증', status: 'success' }
   ];
   return (
     <div className="mission-page">
 
       <BackButton />
       <MissionStatus />
-      <Participants name={missions[0].name}/>
+      <Participants name="안전운전 통합민원 미션"/>
       <div className="mission-cards">
         {missions.map((mission, index) => (
           <MissionCard
